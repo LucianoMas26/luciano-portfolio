@@ -7,6 +7,7 @@ import profileImage from "@/images/profilePicAbout.png"
 import { useRef, useEffect } from "react"
 import { useMotionValue, useSpring } from "framer-motion"
 import { useInView } from "framer-motion"
+import { Skills } from "@/components/Skills/Skills"
 
 interface AnimatedNumberProps {
   value: number
@@ -104,6 +105,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          <Skills />
         </MainLayout>
       </main>
     </>
