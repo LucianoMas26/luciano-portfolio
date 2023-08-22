@@ -44,6 +44,9 @@ const config: Config = {
       boxShadow: {
         "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)"
       }
+    },
+    animation: {
+      "spin-slow": "spin 3s linear infinite"
     }
   },
   plugins: []
