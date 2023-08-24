@@ -8,6 +8,8 @@ import { useRef, useEffect } from "react"
 import { useMotionValue, useSpring } from "framer-motion"
 import { useInView } from "framer-motion"
 import { Skills } from "@/components/Skills/Skills"
+import { Experience } from "@/components/Experience/Experience"
+import { Education } from "@/components/Education/Education"
 
 interface AnimatedNumberProps {
   value: number
@@ -106,6 +108,8 @@ export default function About() {
             </div>
           </div>
           <Skills />
+          <Experience />
+          <Education />
         </MainLayout>
       </main>
     </>

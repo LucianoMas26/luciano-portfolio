@@ -1,5 +1,5 @@
 import Image from "next/image"
-import profilePic from "@/images/profileAvatar-transformed.png"
+import profilePic from "@/images/fotoColorProfile-PhotoRoom.png"
 import { MainLayout } from "@/components/MainLayout/MainLayout"
 import { AnimatedText } from "@/components/AnimatedText/AnimatedText"
 import Link from "next/link"
@@ -16,7 +16,7 @@ export default function Home() {
             <Image
               src={profilePic}
               alt=""
-              className="w-[80%] h-auto rounded-full "
+              className="w-[90%] h-auto rounded-full "
             />
           </div>
           <div className="w-1/2 flex flex-col items-center self-center">
