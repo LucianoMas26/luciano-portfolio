@@ -1,3 +1,4 @@
+"use client"
 import { AnimatedText } from "@/components/AnimatedText/AnimatedText"
 import { MainLayout } from "@/components/MainLayout/MainLayout"
 import Head from "next/head"
@@ -8,6 +9,7 @@ import project2 from "@/images/rickAndMorty.jpeg"
 import project3 from "@/images/videogameApp.jpg"
 import project1 from "@/images/parcels.jpg"
 import { StaticImageData } from "next/image"
+import { motion } from "framer-motion"
 interface FeaturedProjectTypes {
   type: string
   title: string
@@ -23,6 +25,8 @@ interface ProjectTypes {
   link: string
   github: string
 }
+
+const FramerImage = motion(Image)
 
 const FeaturedProject = ({
   type,
@@ -40,7 +44,13 @@ const FeaturedProject = ({
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6">
         <span className="text-primary font-medium text-xl">{type}</span>
@@ -78,7 +88,13 @@ const Project = ({ title, type, img, link, github }: ProjectTypes) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary font-medium text-xl">{type}</span>
