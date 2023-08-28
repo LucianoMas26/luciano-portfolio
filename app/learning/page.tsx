@@ -5,7 +5,8 @@ import Head from "next/head"
 import { StaticImageData } from "next/image"
 import Link from "next/link"
 import Image from "next/image"
-import article1 from "@/images/rickAndMorty.jpeg"
+import article1 from "@/images/heg.jpg"
+import article2 from "@/images/Captura.jpg"
 import { motion, useMotionValue } from "framer-motion"
 import React, { useRef } from "react"
 interface FeaturedArticleTypes {
@@ -13,7 +14,6 @@ interface FeaturedArticleTypes {
   title: string
   time: string
   summary: string
-  link: string
 }
 interface ArticleTypes {
   img: StaticImageData
@@ -87,14 +87,13 @@ const FeaturedArticle = ({
   img,
   title,
   time,
-  summary,
-  link
+  summary
 }: FeaturedArticleTypes) => {
   return (
     <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative">
       <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
       <Link
-        href={link}
+        href=""
         target="_blank"
         className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"
       >
@@ -104,9 +103,13 @@ const FeaturedArticle = ({
           className="w-full h-auto"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          priority
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
         />
       </Link>
-      <Link href={link} target="_blank">
+      <Link href="" target="_blank">
         <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
           {title}
         </h2>
@@ -117,7 +120,7 @@ const FeaturedArticle = ({
   )
 }
 
-export default function articles() {
+export default function learning() {
   return (
     <>
       <Head>
@@ -126,60 +129,50 @@ export default function articles() {
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
         <MainLayout className="pt-16">
-          <AnimatedText text="Words Can Change The World!" className="mb-16" />
+          <AnimatedText
+            text="
+If You Want To Learn, Teach"
+            className="mb-16"
+          />
           <ul className="grid grid-cols-2 gap-16">
             <FeaturedArticle
-              title="Build A Custom Pagination Component In Reactjs From Scratch"
-              summary="Learn how to build a custom pagination component in ReactJS from scratch. Follow this step-by-step guide to integrate Pagination component in your ReactJS project"
-              time="9 min read"
-              link="/"
+              title="App For The Sale Of Components And Custom Assemblies Of Computers"
+              summary="Explore and purchase computer components or custom assemblies with our cutting-edge Nuxt app, powered by advanced technologies such as TypeScript and Tailwind. Designed to simplify the process of buying and building personalized computer setups"
+              time="2023"
               img={article1}
             />
             <FeaturedArticle
-              title="Build A Custom Pagination Component In Reactjs From Scratch"
-              summary="Learn how to build a custom pagination component in ReactJS from scratch. Follow this step-by-step guide to integrate Pagination component in your ReactJS project"
-              time="9 min read"
-              link="/"
-              img={article1}
+              title="App For Buying And Selling Digital Art Nft"
+              summary="mmerse yourself in the world of digital art NFTs with our app, crafted using the same technologies. Buy and sell unique artworks seamlessly, all powered by Nuxt, TypeScript, and Tailwind"
+              time="2023"
+              img={article2}
             />
           </ul>
           <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
-            All Articles
+            New Learning
           </h2>
           <ul>
             <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              date="March 22, 2023"
+              title="New Framework Nuxt 3: Learning Fundamentals And Principles Of Nuxt 3"
+              date="2023"
               link="/"
               img={article1}
             />
             <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              date="March 22, 2023"
+              title="Learning Cloud Computing AWS: Cloud Architecture, Container Services, Database and Storage Services"
+              date="2023"
               link="/"
               img={article1}
             />
             <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              date="March 22, 2023"
+              title="Learning Microservices: Robust Backend Structure, Decomposition Services, Individual Scalability"
+              date="2023"
               link="/"
               img={article1}
             />
             <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              date="March 22, 2023"
-              link="/"
-              img={article1}
-            />
-            <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              date="March 22, 2023"
-              link="/"
-              img={article1}
-            />
-            <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
-              date="March 22, 2023"
+              title="Learning Mobile User Interfaces: Development of Native Mobile Applications With Flutter And React Native"
+              date="2023"
               link="/"
               img={article1}
             />

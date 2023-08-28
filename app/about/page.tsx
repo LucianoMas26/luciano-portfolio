@@ -47,17 +47,17 @@ export default function About() {
       <main className="flex w-full flex-col items-center justify-center">
         <MainLayout className="pt-16">
           <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
-          <div className="grid w-fuññ grid-cols-8 gap-16">
+          <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                 Biography
               </h2>
               <p className="font-medium">
-                Hi, I'm CodeBucks, a web developer and UI/UX designer with a
+                Hi, I'm Luciano Mas, a web developer and UI/UX designer with a
                 passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients' visions to life.
+                digital experiences. With 2 years of experience in the field. I
+                am always looking for new and innovative ways to bring new'
+                visions to life.
               </p>
               <p className="font-medium my-4">
                 I believe that design is about more than just making things look
@@ -78,6 +78,10 @@ export default function About() {
                 src={profileImage}
                 alt="LucianoMas"
                 className="w-full h-auto rounded-2xl"
+                priority
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               />
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between">
