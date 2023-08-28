@@ -9,7 +9,7 @@ import { AnimatePresence } from "framer-motion"
 import { usePathname } from "next/navigation"
 const montserrat = Montserrat({ subsets: ["latin"] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Luciano Portfolio",
   description: "Luciano's Portfolio"
 }
@@ -22,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>{metadata.title as string}</title>
+        <meta name="description" content={metadata.description as string} />
       </Head>
       <body className={`${montserrat.className} bg-light w-full min-h-screen`}>
         <Navbar />
