@@ -9,6 +9,7 @@ import article1 from "@/images/heg.jpg"
 import article2 from "@/images/Captura.jpg"
 import { motion, useMotionValue } from "framer-motion"
 import React, { useRef } from "react"
+import { TransitionEffect } from "@/components/TransitionEffect/TransitionEffect"
 interface FeaturedArticleTypes {
   img: StaticImageData
   title: string
@@ -63,7 +64,7 @@ const MovingImg = ({ title, img, link }: MovingImgTypes) => {
         ref={imgRef}
         src={img}
         alt={title}
-        className="z-10 w-96 h-auto hidden absolute rounded-lg"
+        className="z-10 w-96 h-auto hidden absolute rounded-lg md:!hidden"
       />
     </Link>
   )
@@ -75,10 +76,12 @@ const Article = ({ img, title, date, link }: ArticleTypes) => {
       initial={{ y: 200 }}
       whileInView={{ y: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4"
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between bg-light text-dark first:mt-0 border border-solid border-dark border-r-4 border-b-4 sm:flex-col"
     >
       <MovingImg title={title} img={img} link={link} />
-      <span className="text-primary font-semibold pl-4">{date}</span>
+      <span className="text-primary font-semibold pl-4 sm:self-start sm:pl-0 xs:text-sm">
+        {date}
+      </span>
     </motion.li>
   )
 }
@@ -110,7 +113,7 @@ const FeaturedArticle = ({
         />
       </Link>
       <Link href="" target="_blank">
-        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline">
+        <h2 className="capitalize text-2xl font-bold my-2 mt-4 hover:underline xs:text-lg">
           {title}
         </h2>
       </Link>
@@ -127,14 +130,14 @@ export default function learning() {
         <title>Luciano Mas | Articles Page</title>
         <meta name="description" content="portfolio" />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
         <MainLayout className="pt-16">
           <AnimatedText
-            text="
-If You Want To Learn, Teach"
-            className="mb-16"
+            text="If You Want To Learn, Teach"
+            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <ul className="grid grid-cols-2 gap-16">
+          <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
             <FeaturedArticle
               title="App For The Sale Of Components And Custom Assemblies Of Computers"
               summary="Explore and purchase computer components or custom assemblies with our cutting-edge Nuxt app, powered by advanced technologies such as TypeScript and Tailwind. Designed to simplify the process of buying and building personalized computer setups"
