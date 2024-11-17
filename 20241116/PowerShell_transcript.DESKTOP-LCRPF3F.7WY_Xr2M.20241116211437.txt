@@ -1,0 +1,18 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20241116211437
+Nombre de usuario: DESKTOP-LCRPF3F\paler
+Usuario RunAs: DESKTOP-LCRPF3F\paler
+Nombre de la configuración: 
+Máquina: DESKTOP-LCRPF3F (Microsoft Windows NT 10.0.19045.0)
+Aplicación host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\paler\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Id. de proceso: 2204
+PSVersion: 5.1.19041.5129
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.5129
+BuildVersion: 10.0.19041.5129
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************

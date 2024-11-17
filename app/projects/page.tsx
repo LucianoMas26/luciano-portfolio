@@ -8,6 +8,8 @@ import { GithubIcon } from "@/components/NavIcons/NavIcons"
 import project2 from "@/images/rickAndMorty.jpeg"
 import project3 from "@/images/videogameApp.jpg"
 import project1 from "@/images/parcels.jpg"
+import project4 from "@/images/Sarsfield.png"
+import project5 from "@/images/luzem.png"
 import { StaticImageData } from "next/image"
 import { motion } from "framer-motion"
 import { TransitionEffect } from "@/components/TransitionEffect/TransitionEffect"
@@ -153,6 +155,16 @@ export default function page() {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
+                title="Sarsfield (BETA)"
+                summary="Jurisprudence search engine powered by artificial intelligence. Built from Nuxt, tailwindCss, TypeScript. It facilitates the search and analysis of jurisprudence quickly and efficiently. It uses machine learning algorithms to deliver relevant results, sorted by context and legal precedent, optimizing the work of lawyers, researchers and law students. The application stands out for its precision, accessibility and continuous learning capacity, adapting to the user's specific needs."
+                img={project4}
+                github=""
+                link="https://sarsfield.ai/g"
+                type="Featured Project"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
                 title="Parcels"
                 summary="Land sales application created with Next.js, TypeScript, Redux Toolkit, MongoDB, Express, Node.js, and Tailwind CSS offers a user-friendly platform for individuals interested in purchasing land in Chile. This combination of technologies enhances the overall user experience, making it simple and enjoyable to explore, select, and acquire desired land parcels."
                 img={project1}
@@ -161,6 +173,17 @@ export default function page() {
                 type="Featured Project"
               />
             </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="Luzem"
+                summary="A tarot application developed with Next.js, TypeScript, Tailwind CSS, MongoDB, and Mongoose. It is designed to offer personalized services for readings and rituals, providing an intuitive experience for clients. The platform allows users to check prices, easily schedule appointments, and efficiently manage bookings. Its modern and responsive design ensures a smooth experience on both mobile and desktop devices, combining cutting-edge technology with a spiritual focus."
+                img={project5}
+                github="https://github.com/LucianoMas26/app-tarot"
+                link="https://luzem.vercel.app/"
+                type="Featured Project"
+              />
+            </div>
+
             <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Rick and Morty"
